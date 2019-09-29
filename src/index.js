@@ -1,4 +1,4 @@
-import {Tagify} from 'tagify-js'
+import { Tagify } from 'tagify-js'
 
 new Tagify({
     target: document.getElementById('tags'),
