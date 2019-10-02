@@ -1,6 +1,6 @@
-import { Tagify } from 'tagify-js'
+import { tagify } from '@smeshkov/tagifyjs';
 
-new Tagify({
+tagify({
     target: document.getElementById('tags'),
     source: 'https://zoomio.org/posts/id/mock_server-5632006343884800'
 });
