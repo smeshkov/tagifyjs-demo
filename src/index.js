@@ -5,9 +5,14 @@ tagify({
     host: 'https://zoomio.org',
     targets: [
         {
-            element: document.getElementById('tags'),
+            element: document.getElementById('tags-1'),
             source: 'https://zoomio.org/posts/id/mock_server-5632006343884800',
             title: 'Mock server'
+        },
+        {
+            element: document.getElementById('tags-2'),
+            source: 'https://zoomio.org/blog/post/humanreadable_urls-5641927449903104',
+            title: 'Human-readable URLs'
         }
     ]
 });
