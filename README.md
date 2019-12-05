@@ -1,5 +1,5 @@
 # TagifyJS Demo
-Demo for Tagify JS.
+Demo for [TagifyJS](https://github.com/zoomio/tagifyjs).
 
 ## How to use it
 
