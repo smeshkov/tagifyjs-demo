@@ -1,4 +1,4 @@
-import { tagify } from '@zoomio/tagifyjs';
+import tagify from '@zoomio/tagifyjs';
 
 tagify({
     appID: 'ff3ee693-acdf-4216-88b7-7b3e4dbe3907',
