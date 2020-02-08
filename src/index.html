@@ -3,15 +3,54 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tester</title>
+    <title>Tagify demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
 
     <div id="content">
-        <p>Tags would be here:</p>
-        <div id="tags">
+        <h2>Simple</h2>
+        <p>Tags for <a href="https://zoomio.org/blog/post/tags_as_a_service-5712840111423488" class="article-link" target="_blank">"Tags as a Service"</a> will be here:</p>
+        <div class="tags-1">
+        </div>
+        <div>
+            <pre>
+                <code style="display: block; padding: 10px; background: rgba(0, 0, 0, 0.05) none repeat scroll 0% 0%;">
+                    // Convenient method for taking care of <a> tags.
+                    tagsForAnchors({
+                        appId: '07553a4b-32cb-466d-9ec6-bebd43c2bcd8',
+                        anchorsClassName: 'article-link',
+                        targetsClassName: 'tags-1',
+                        pagesUrl: 'https://zoomio.org/tagify/relevant'
+                    });
+                </code>
+            </pre>
+        </div>
+        <h2>More powerful</h2>
+        <p>Or if you'd prefer more control over things you can do it this way too:</p>
+        <div id="tags-2">
+        </div>
+        <div>
+            <pre>
+                <code style="display: block; padding: 10px; background: rgba(0, 0, 0, 0.05) none repeat scroll 0% 0%;">
+                    // Core method, provides more control.
+                    tagify({
+                        appId: '07553a4b-32cb-466d-9ec6-bebd43c2bcd8',
+                        host: 'https://zoomio.org',
+                        pagesUrl: 'https://zoomio.org/tagify/relevant',
+                        targets: [
+                            {
+                                element: document.getElementById('tags-2'),
+                                source: 'https://zoomio.org/blog/post/tags_as_a_service-5712840111423488',
+                                title: 'Tags as a Service'
+                            }
+                        ]
+                    });
+                </code>
+            </pre>
         </div>
     </div>
 
